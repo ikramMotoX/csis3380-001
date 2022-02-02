@@ -44,7 +44,9 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 function getRandomQuote() {
+    // varibale to get the random number for the index
     let randomQuote = Math.floor(Math.random() * quotes.length);
+// this returns the random object from quotes with random index number
 return quotes[randomQuote];
 }
 
@@ -52,7 +54,7 @@ return quotes[randomQuote];
 
 /***
  * `printQuote` function
- *  + "</p>"
+ * 
 ***/
 function printQuote() {
     let result = getRandomQuote();
@@ -63,6 +65,7 @@ function printQuote() {
     if("year" in result){
         PtoHTML1 += "<span class='year'>" + result.year + "</span>";
     }
+    // added closing p tag to the final html string
     PtoHTML1 += "</p>";
     document.getElementById('quote-box').innerHTML = PtoHTML1;
 
